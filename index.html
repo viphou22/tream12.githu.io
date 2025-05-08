@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TREAM12 Responsive</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer&display=swap" rel="stylesheet" />
+  <style>
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Noto Sans Khmer', 'Khmer OS', 'Battambang', Arial, sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #004080;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 60px;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap;
+}
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+nav {
+  flex-grow: 1;
+  margin-left: 30px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+nav a:hover,
+nav a:focus {
+  background-color: #0066cc;
+  outline: none;
+}
+.search-container {
+  position: relative;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+.search-container input[type="text"] {
+  padding: 6px 30px 6px 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  width: 180px;
+  transition: opacity 0.3s ease;
+}
+.search-container input[type="text"]:focus {
+  outline: 2px solid #99ccff;
+}
+.search-icon {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #004080;
+  font-size: 1.2rem;
+  user-select: none;
+}
+.cta-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 20px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.cta-button:hover,
+.cta-button:focus {
+  background-color: #e65c00;
+  outline: none;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: white;
+  user-select: none;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+
+/* Navbar responsive */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #004080;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  nav a {
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  nav a:last-child {
+    border-bottom: none;
+  }
+  nav.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .search-container {
+    order: 3;
+    width: 100%;
+    margin: 10px 0;
+  }
+  .search-container input[type="text"] {
+    width: 100%;
+  }
+  .cta-button {
+    order: 4;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+  }
+  .logo {
+    flex-grow: 1;
+  }
+}
+
+/* Middle section */
+.middle {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.box {
+  width: 500px;
+  max-width: 90vw;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+}
+.box img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.khmer-text {
+  font-size: 100px;
+  animation: slide-in 3s forwards;
+  word-break: break-word;
+}
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Teach section */
+.teach {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 30px 0;
+  flex-wrap: wrap;
+}
+.teacher {
+  width: 160px;
+  height: auto;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.teacher img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.teacher h2 {
+  color: #3598fb;
+  font-size: 30px;
+  margin: 0;
+  margin-top: 8px;
+  text-align: center;
+  font-family: 'Noto Sans Khmer', 'Khmer OS', 'Battambang', Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  background: none;
+}
+
+
+/* Info section */
+.container {
+  width: 100%;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+.chile {
+  width: 500px;
+  max-width: 90vw;
+  height: 500px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+}
+.chile img {
+  animation: slide-in 3s forwards;
+  max-width: 95%;
+  height: auto;
+  border-radius: 10px;
+}
+.info-text {
+  font-size: 45px;
+  color: #3598fb;
+  word-spacing: 10px;
+  margin-top: 20px;
+}
+
+/* Major section */
+.major {
+  width: 100%;
+  padding: 40px 0;
+  background: #f8fafd;
+  text-align: center;
+}
+.section-title {
+  color: #3598fb;
+  font-size: 45px;
+  margin-bottom: 30px;
+}
+.major-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.boxes {
+  width: 260px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.boxes img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.boxes h2 {
+  color: #3598fb;
+  font-size: 24px;
+  margin: 10px 0;
+}
+.boxes button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+  color: white;
+  background-color: #3598fb;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.boxes:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,123,255,0.2);
+}
+.footer {
+  background-color: #004080; /* Your signature blue */
+  color: white;
+  padding: 30px 20px;
+  font-family: 'Noto Sans Khmer', Arial, sans-serif;
+}
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #99ccff;
+  outline: none;
+  text-decoration: underline;
+}
+.footer-social {
+  display: flex;
+  gap: 15px;
+  font-size: 1.4rem;
+}
+.footer-social a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-social a:hover,
+.footer-social a:focus {
+  color: #99ccff;
+  outline: none;
+}
+.footer-copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #cce0ff;
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 0;
+  }
+  .footer-links a {
+    display: inline-block;
+    padding: 5px 10px;
+  }
+  .footer-social {
+    justify-content: center;
+  }
+}
+
+ 
+/* Responsive */
+@media (max-width: 1024px) {
+  .box {
+    width: 350px;
+    height: auto;
+    bottom: 0;
+  }
+ 
+  .teacher {
+    width: 140px;
+    height: 140px;
+  }
+  .container {
+    justify-content: center;
+  }
+  .chile {
+    width: 350px;
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .middle {
+    flex-direction: column;
+    bottom: 0;
+    padding: 10px 0;
+  }
+  .box {
+    width: 95vw;
+    max-width: 400px;
+    margin: 0 auto 20px;
+  }
+  
+  .khmer-text {
+    font-size: 4rem;
+    color: #3598fb;
+  }
+  .teach {
+    justify-content: center;
+  }
+  .teacher {
+    width: 110px;
+    height: 110px;
+    margin-right: 10px;
+  }
+  .teacher h2 {
+    font-size: 20px;
+  }
+  .container {
+    justify-content: center;
+  }
+  .chile {
+    width: 90vw;
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+  .info-text {
+    font-size: 25px;
+  }
+  .major-boxes {
+    justify-content: center;
+  }
+  .boxes {
+    width: 90vw;
+    max-width: 250px;
+    height: auto;
+    margin: 10px auto;
+  }
+  .boxes img {
+    height: 100px;
+  }
+  .boxes h2 {
+    font-size: 20px;
+  }
+  .boxes button {
+    font-size: 18px;
+    height: 40px;
+    width: 100px;
+  }
+}
+@media (max-width: 480px) {
+  .box h1 {
+    font-size: 1.5rem;
+  }
+  .teacher {
+    width: 90px;
+    height: 90px;
+  }
+  .teacher h2 {
+    font-size: 16px;
+  }
+  
+  .chile {
+    width: 98vw;
+    max-width: 98vw;
+  }
+  .boxes {
+    width: 98vw;
+    max-width: 98vw;
+  }
+}
+  </style>
+</head>
+<body>
+<header class="navbar" role="banner" aria-label="Primary Navigation">
+  <a href="#" class="logo">TREAM12</a>
+  <span class="menu-toggle" aria-label="Toggle menu" tabindex="0">&#9776;</span>
+  <nav role="navigation" aria-label="Main menu" id="nav-menu">
+    <ul>
+      <li><a href="#document" tabindex="0">document</a></li>
+      <li><a href="#resources" tabindex="0">Resources</a></li>
+      <li><a href="ABOUT.html" tabindex="0">About</a></li>
+      <li><a href="contacts.html" tabindex="0">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="search-container" aria-label="Site search">
+    <input type="text" id="search-input" placeholder="Search courses..." aria-label="Search courses" />
+    <span class="search-icon" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle search input">&#128269;</span>
+  </div>
+  <button class="cta-button" aria-label="Enroll now">Enroll Now</button>
+</header>
+
+<div class="middle">
+  <div class="box">
+    <img src="rean.png" alt="Illustration" />
+  </div>
+  <div class="box">
+    <h1 class="khmer-text">ត្រៀម១២</h1>
+  </div>
+</div>
+
+<hr />
+
+<center><h1 class="section-title">គ្រូបង្រៀន</h1></center>
+<div class="teach">
+  <div class="teacher">
+    <img src="viphoo.jpg" alt="ម៉មវិភូ" />
+    <h2>ម៉មវិភូ</h2>
+  </div>
+  <div class="teacher">
+    <img src="david.jpg" alt="ផលដាវីត" />
+   
+    <h2>ផលដាវីត</h2>
+  </div>
+  <div class="teacher">
+    <img src="panha.jpg" alt="យ៉ានបញ្ញ៉ា" />
+    <h2>យ៉ានបញ្ញ៉ា</h2>
+  </div>
+</div>
+
+<hr />
+
+<center><h1 class="section-title">គោលដៅ</h1></center>
+<div class="info">
+  <div class="container">
+    <div class="chile">
+      <img src="info.png" alt="Info" />
+    </div>
+    <div class="chile">
+      <h1 class="khmer-text info-text">
+        គេហទំព័រនេះត្រូវបានបង្កើតឡើង ដើម្បីជាការរួមចំណែកជួយសិស្សានុសិស្សក្នុងការត្រៀមប្រឡងកម្រិតមធ្យមសិក្សាទុតិយភូមិឲ្យមានប្រសិទ្ធភាព និងជោគជ័យ។      </h1>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<div class="major">
+  <h1 class="section-title">វិទ្យាសាស្ត្រពិត</h1>
+  <div class="major-boxes">
+    <div class="boxes">
+      <img src="math.png" alt="គណិតវិទ្យា" />
+      <h2>គណិតវិទ្យា</h2>
+      <button>រៀន</button>
+    </div>
+    <div class="boxes">
+      <img src="physic.png" alt="រូបវិទ្យា" />
+      <h2>រូបវិទ្យា</h2>
+      <button>រៀន</button>
+    </div>
+    <div class="boxes">
+      <img src="chemist.png" alt="គីមីវិទ្យា" />
+      <h2>គីមីវិទ្យា</h2>
+      <button>រៀន</button>
+    </div>
+    <div class="boxes">
+      <img src="bio.png" alt="ជីវិទ្យា" />
+      <h2>ជីវិទ្យា</h2>
+      <button>រៀន</button>
+    </div>
+  </div>
+</div>
+<div class="footer" role="contentinfo">
+  <div class="footer-container">
+    <div class="footer-logo" aria-label="Logo"><center>TREAM12</center></div>
+    <div class="footer-social" aria-label="Social media links">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">🐦</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">📸</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    © 2025 TREAM12. សិទ្ធិគ្រប់យ៉ាងបានរក្សាទុក។
+  </div>
+</div>
+<script>
+  // Hamburger menu toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  menuToggle.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      menuToggle.click();
+    }
+  });
+
+  // Search icon toggle
+  const searchIcon = document.querySelector('.search-icon');
+  const searchInput = document.getElementById('search-input');
+
+  searchIcon.addEventListener('click', () => {
+    if (searchInput.style.display === 'block' || searchInput.style.display === '') {
+      searchInput.style.display = 'none';
+      searchIcon.setAttribute('aria-pressed', 'false');
+    } else {
+      searchInput.style.display = 'block';
+      searchInput.focus();
+      searchIcon.setAttribute('aria-pressed', 'true');
+    }
+  });
+
+  searchIcon.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      searchIcon.click();
+    }
+  });
+
+  function checkWidth() {
+    if (window.innerWidth <= 768) {
+      searchInput.style.display = 'none';
+      searchIcon.setAttribute('aria-pressed', 'false');
+    } else {
+      searchInput.style.display = 'block';
+      searchIcon.setAttribute('aria-pressed', 'true');
+    }
+  }
+  window.addEventListener('resize', checkWidth);
+  window.addEventListener('load', checkWidth);
+</script>
+</body>
+</html>

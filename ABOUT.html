@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>អំពីវេទិការ - ត្រៀម១២</title>
+  <style>
+    /* Reset and base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Noto Sans Khmer', 'Khmer OS', 'Battambang', Arial, sans-serif;
+      margin: 0;
+      background-color: #eaf4ff; /* soft light blue */
+      color: #3a4a69; /* soft dark blue */
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    /* Go Back Link */
+    .go-back {
+      display: inline-block;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      color: #3598fb;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+    .go-back:hover,
+    .go-back:focus {
+      color: #1a5fcc;
+      outline: none;
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .about-container {
+      max-width: 900px;
+      margin: 0 auto 60px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 40px 35px 50px;
+      box-shadow: 0 6px 18px rgba(53, 152, 251, 0.12);
+      text-align: center;
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Title */
+    .about-title {
+      font-size: 2.8rem;
+      color: #5a8dee; /* softer blue */
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Battambang', 'Noto Sans Khmer', Arial, sans-serif;
+      letter-spacing: 0.05em;
+    }
+    /* Subtle underline */
+    .about-title::after {
+      content: "";
+      display: block;
+      width: 50px;
+      height: 3px;
+      background-color: #5a8dee;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Text content */
+    .about-text {
+      font-size: 1.15rem;
+      color: #516d9a; /* medium blue-gray */
+      text-align: justify;
+      white-space: pre-line;
+      font-weight: 500;
+      letter-spacing: 0.015em;
+      margin-top: 25px;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+    .about-text p {
+      margin-bottom: 1.4em;
+    }
+
+    /* Friendly icon */
+    .about-icon {
+      font-size: 56px;
+      color: #5a8dee;
+      margin-bottom: 18px;
+      user-select: none;
+      filter: drop-shadow(0 1px 1px rgba(90, 141, 238, 0.3));
+    }
+
+    /* New section: who built */
+    .who-built-section {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 40px 35px;
+      box-shadow: 0 6px 18px rgba(53, 152, 251, 0.12);
+      color: #516d9a;
+      line-height: 1.6;
+    }
+    .who-built-text {
+      flex: 1 1 60%;
+      font-size: 1.15rem;
+      font-weight: 500;
+      text-align: justify;
+      letter-spacing: 0.015em;
+    }
+    .who-built-image {
+      flex: 1 1 35%;
+      max-width: 320px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(53, 152, 251, 0.3);
+    }
+    .who-built-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-container {
+        padding: 30px 25px 40px;
+      }
+      .about-title {
+        font-size: 2.2rem;
+      }
+      .about-text {
+        font-size: 1rem;
+      }
+      .about-icon {
+        font-size: 44px;
+      }
+      .who-built-section {
+        flex-direction: column;
+        padding: 30px 25px;
+      }
+      .who-built-text, .who-built-image {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .who-built-image {
+        margin-top: 25px;
+      }
+    }
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 15px;
+      }
+      .about-container {
+        padding: 20px 15px 30px;
+      }
+      .about-title {
+        font-size: 1.8rem;
+      }
+      .about-text {
+        font-size: 0.95rem;
+      }
+      .about-icon {
+        font-size: 36px;
+      }
+      .who-built-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Go Back Link -->
+  <a href="index.html" class="go-back" aria-label="ត្រឡប់ក្រោយ">← ត្រឡប់ក្រោយ</a>
+
+  <!-- Original About Us Section -->
+  <section class="about-container" aria-label="អំពីវេទិការ">
+    <div class="about-icon" aria-hidden="true">🌟</div>
+    <h1 class="about-title">ស្វាគមន៍មកកាន់វេទិការ “ត្រៀម១២”</h1>
+    <div class="about-text">
+      <p>
+        វេទិការ “ត្រៀម១២” ត្រូវបានបង្កើតឡើងដោយចិត្តស្រឡាញ់ និងប្តេជ្ញាចិត្តក្នុងការជួយសិស្សានុសិស្សទាំងអស់
+        ដើម្បីឲ្យពួកគេមានឱកាសរៀន និងត្រៀមខ្លួនបានយ៉ាងល្អបំផុតសម្រាប់ប្រឡងកម្រិតមធ្យមសិក្សាទុតិយភូមិ។
+      </p>
+      <p>
+        ជាមួយនឹងមេរៀនគណិតវិទ្យា រូបវិទ្យា គីមីវិទ្យា និងជីវវិទ្យា ដែលបង្រៀនដោយគ្រូជំនាញ
+        ដែលមានបទពិសោធន៍ និងចំណេះដឹងជ្រាលជ្រៅ វេទិការបស់យើងផ្តល់នូវការបង្រៀនដែលច្បាស់លាស់ និងងាយស្រួលយល់។
+      </p>
+      <p>
+        យើងជឿជាក់ថា ការសិក្សាដោយសុវត្ថិភាព និងការគាំទ្រពីគ្រូបង្រៀនល្អ
+        គឺជាគន្លងដ៏សំខាន់ក្នុងការជោគជ័យរបស់សិស្សានុសិស្ស។
+        ដូច្នេះវេទិការបស់យើងតែងតែត្រៀមខ្លួនដើម្បីផ្តល់ជំនួយ និងការគាំទ្រដល់អ្នករៀនគ្រប់ពេលវេលា។
+      </p>
+      <p>
+        សូមចូលរួមជាមួយយើងក្នុងការស្វែងយល់ និងរីកចម្រើនជាមួយគ្នា!
+      </p>
+    </div>
+  </section>
+
+  <!-- New Who Built Section -->
+   <center><h1>អ្នកណាសរសេវេទិកានេះ?</h1></center>
+  <section class="who-built-section" aria-label="អ្នកបង្កើតវេទិការ">
+    <div class="who-built-text" id="who-built-text">
+      <p>
+        វេទិការ “ត្រៀម១២” ត្រូវបានបង្កើតឡើងនៅថ្ងៃទី ២០ តុលា ២០២៣ ដោយ <strong>ម៉មវិភូ</strong>។ វេទិកានេះគឺជាគំនិតដំបូងដែលបានបង្កើតឡើងសម្រាប់ជាកន្លែងសិក្សា និងផ្តល់ជំនួយដល់សិស្សានុសិស្សក្នុងការត្រៀមប្រឡង។  
+        បច្ចុប្បន្ននេះ វេទិកានេះកំពុងតែបន្តអភិវឌ្ឍន៍ និងកែលម្អរចនាប័ទ្ម ដើម្បីធ្វើឲ្យមានប្រសិទ្ធភាព និងងាយស្រួលប្រើប្រាស់។  
+        ដោយសារតែមានកំណត់ធនធាន និងស្ថានភាពជាសិស្សដែលកំពុងសិក្សា ខ្ញុំមិនទាន់មានបទពិសោធន៍ច្រើនទេ ប៉ុន្តែខ្ញុំមានបំណងចង់បង្កើតវេទិកានេះសម្រាប់អនាគត ដើម្បីជួយសិស្សានុសិស្សទៀតនៅពេលខ្ញុំមានបទពិសោធន៍ និងជំនាញល្អជាងនេះ។  
+        វេទិកានេះគឺជាចំណុចចាប់ផ្តើមនៃការប្តេជ្ញាចិត្ត និងការរីកចម្រើនរបស់ខ្ញុំក្នុងវិស័យអប់រំ និងបច្ចេកវិទ្យា។
+      </p>
+    </div>
+    <div class="who-built-image">
+      <img src="phou.jpg" alt="អ្នកបង្កើតវេទិការ" />
+    </div>
+  </section>
+</body>
+</html>

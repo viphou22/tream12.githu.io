@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ទំនាក់ទំនង</title>
+  <style>
+    body {
+      font-family: 'Noto Sans Khmer', Arial, sans-serif;
+      background-color: #f9fbff;
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .go-back {
+      display: inline-block;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      color: #3598fb;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      user-select: none;
+    }
+    .go-back:hover,
+    .go-back:focus {
+      color: #2a7cd6;
+      outline: none;
+      text-decoration: underline;
+    }
+    .contact-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px 25px;
+      box-shadow: 0 4px 15px rgba(53, 152, 251, 0.15);
+    }
+    h2 {
+      color: #3598fb;
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .contact-info {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+    .contact-info strong {
+      color: #3598fb;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      font-family: inherit;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    button {
+      background-color: #3598fb;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1.1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button:hover,
+    button:focus {
+      background-color: #2a7cd6;
+      outline: none;
+    }
+    @media (max-width: 480px) {
+      .contact-container {
+        padding: 20px 15px;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="go-back" aria-label="ត្រឡប់ក្រោយ">← ត្រឡប់ក្រោយ</a>
+  
+  <section class="contact-container" aria-label="ទំនាក់ទំនង">
+    <h2>ទំនាក់ទំនងមកយើង</h2>
+    <div class="contact-info">
+      <p><strong>អ៊ីមែល:</strong> support@tream12.com</p>
+      <p><strong>ទូរស័ព្ទ:</strong> +855 12 345 678</p>
+      <p><strong>អាសយដ្ឋាន:</strong> ផ្លូវលេខ ១២៣, ភ្នំពេញ, កម្ពុជា</p>
+      <p><strong>ហ្វេសប៊ុក:</strong> <a href="https://www.facebook.com/share/p/1AukDaWMvg/" target="_blank" rel="noopener">facebook.com/pou pou</a></p>
+    </div>
+    <form action="#" method="post" aria-label="ទម្រង់ទំនាក់ទំនង">
+      <input type="text" name="name" placeholder="ឈ្មោះរបស់អ្នក" required aria-required="true" />
+      <input type="email" name="email" placeholder="អ៊ីមែលរបស់អ្នក" required aria-required="true" />
+      <textarea name="message" placeholder="សាររបស់អ្នក" required aria-required="true"></textarea>
+      <button type="submit">ផ្ញើសារ</button>
+    </form>
+  </section>
+</body>
+</html>
